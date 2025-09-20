@@ -1,2 +1,6 @@
-{{- $githubToken := (default "ghp_xxxxxxx" (env "GITHUB_TOKEN")) -}}
+{{- $githubToken := (promptString "Enter your GitHub token (for private repo access):") -}}
 {{- $privateRepo := (default "johnston/dotfiles-private" (env "DOTFILES_PRIVATE_REPO")) -}}
+
+[data]
+  githubToken = "{{ $githubToken }}"
+  privateRepo = "{{ $privateRepo }}"
