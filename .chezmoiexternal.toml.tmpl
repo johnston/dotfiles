@@ -1,3 +1,4 @@
 [".local/share/chezmoi.private"]
   type = "git-repo"
   url = "https://{{ .githubToken }}@github.com/{{ .privateRepo }}.git"
+  refreshPeriod = "24h"
